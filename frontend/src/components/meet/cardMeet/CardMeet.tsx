@@ -7,7 +7,7 @@ interface cardMeetProps {
   delteFunc(): void;
 }
 
-function CardMeet({ delteFunc, meet: { description, devGroup: { name: devGroupName }, devGroupId, finishTime, id, room, startTime } }: cardMeetProps) {
+function CardMeet({ delteFunc, meet: { description, devGroup: { name: devGroupName }, finishTime, id, room, startTime } }: cardMeetProps) {
   const navigate = useNavigate();
 
   async function deleteMeet() {
