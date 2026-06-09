@@ -1,0 +1,151 @@
+{
+  "info": {
+    "_postman_id": "e7057a5e-f557-4a16-94e1-d78067aa5925",
+    "name": "meetFlowCollection",
+    "description": "meetFlowCollection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53399140"
+  },
+  "item": [
+    {
+      "name": "getAllDevGroups",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/devGroups",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "devGroups"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getMeetByDevGroup",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/meets/devGroup/083e998f-63ce-11f1-a04f-4e0bdc31629a",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "meets",
+            "devGroup",
+            "083e998f-63ce-11f1-a04f-4e0bdc31629a"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "meatDeatilsById",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/meets/3c3ffaf9-63cf-11f1-a04f-4e0bdc31629a",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "meets",
+            "3c3ffaf9-63cf-11f1-a04f-4e0bdc31629a"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "newMeet",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"devGroupId\":\"083e998f-63ce-11f1-a04f-4e0bdc31629a\",\r\n\"startTime\":\"2027-06-09T06:40:11.000Z\",\r\n\"finishTime\":\"2027-06-09T10:40:11.000Z\",\r\n\"description\":\"'very very boring meet'\",\r\n\"room\":\"'the m room'\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/meets/new",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "meets",
+            "new"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateMeet",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"devGroupId\":\"083e998f-63ce-11f1-a04f-4e0bdc31629a\",\r\n\"startTime\":\"2027-06-09T06:40:11.000Z\",\r\n\"finishTime\":\"2027-06-09T10:40:11.000Z\",\r\n\"description\":\"'very very joking meet'\",\r\n\"room\":\"'the w room'\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/meets/update/3c3ffaf9-63cf-11f1-a04f-4e0bdc31629a",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "meets",
+            "update",
+            "3c3ffaf9-63cf-11f1-a04f-4e0bdc31629a"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteMeet",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/meets/delete/3c4042b8-63cf-11f1-a04f-4e0bdc31629a",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "meets",
+            "delete",
+            "3c4042b8-63cf-11f1-a04f-4e0bdc31629a"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
