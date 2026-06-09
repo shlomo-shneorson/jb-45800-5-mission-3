@@ -26,8 +26,8 @@ function UpdateMeet() {
                     const currentMeet = await meetService.getMeetDetailsById(id); 
                     
                     if (currentMeet) {
-                        currentMeet.startTime = new Date(currentMeet.startTime).toISOString().slice(0, 16) as any;
-                        currentMeet.finishTime = new Date(currentMeet.finishTime).toISOString().slice(0, 16) as any;
+                        currentMeet.startTime = new Date(currentMeet.startTime).toISOString().slice(0, 16) as unknown as Date;
+                        currentMeet.finishTime = new Date(currentMeet.finishTime).toISOString().slice(0, 16) as  unknown as Date;
                         reset(currentMeet); 
                     }
                 }
