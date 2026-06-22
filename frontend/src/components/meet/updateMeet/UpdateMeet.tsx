@@ -50,7 +50,7 @@ function UpdateMeet() {
                     description: data.description,
                     room: data.room
                 };
-                await meetService.updateMeet(id, cleanData as any);
+                await meetService.updateMeet(id, cleanData as Meet);
                 navigate("/"); 
             }
         } catch (e: any) {
